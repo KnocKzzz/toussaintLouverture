@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import dsibel from "../assets/img/d-sibels.jpeg";
+import happyShow from "../assets/img/happy_shows.jpeg";
 
 const VIDEO_ID = "dBEpXXIbKYI";
 const HELLOASSO_URL =
@@ -141,6 +143,53 @@ function Footer({ onContactOpen }: Props) {
         >
           Nous contacter
         </motion.button>
+
+        {/* ── Partenaires ── */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-6 w-full"
+        >
+          <p
+            className="text-white/20 uppercase tracking-[0.3em]"
+            style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem" }}
+          >
+            Partenaires
+          </p>
+          <div className="flex items-center justify-center gap-10">
+            <img
+              src={dsibel}
+              alt="Association D-Sibel"
+              style={{
+                height: "48px",
+                width: "auto",
+                objectFit: "contain",
+                filter: "none",
+                opacity: 0.85,
+              }}
+            />
+            <div
+              style={{
+                width: "1px",
+                height: "32px",
+                background: "rgba(245,200,66,0.2)",
+              }}
+            />
+            <img
+              src={happyShow}
+              alt="Happy Show"
+              style={{
+                height: "48px",
+                width: "auto",
+                objectFit: "contain",
+                filter: "none",
+                opacity: 0.85,
+              }}
+            />
+          </div>
+        </motion.div>
 
         {/* ── Bas de page ── */}
         <div className="w-full flex flex-col items-center gap-3 pt-4 border-t border-white/5">
