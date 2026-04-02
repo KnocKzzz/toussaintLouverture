@@ -35,15 +35,15 @@ function Description() {
             className="text-white"
             style={{
               fontFamily: "'Cinzel', serif",
-              fontSize: "clamp(1.1rem, 2.2vw, 1.9rem)",
+              fontSize: "clamp(0.8rem, 3.8vw, 1.9rem)",
               fontWeight: 600,
               fontStyle: "italic",
               letterSpacing: "0.03em",
-              lineHeight: 1.3,
-              whiteSpace: "nowrap",
+              lineHeight: 1.4,
+              overflowWrap: "break-word",
             }}
           >
-            « Quand l'histoire refuse l'oubli, elle se chante. »
+            « Quand l'histoire refuse l'oubli,<br className="sm:hidden" /> elle se chante. »
           </h1>
         </motion.div>
 
