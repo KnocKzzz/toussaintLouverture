@@ -137,6 +137,11 @@ function ContactModal({ onClose }: Props) {
               </div>
 
               <div>
+                <label style={labelStyle}>Téléphone</label>
+                <input name="telephone" type="tel" style={inputStyle} />
+              </div>
+
+              <div>
                 <label style={labelStyle}>Message</label>
                 <textarea
                   name="message"
