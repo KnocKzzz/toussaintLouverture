@@ -29,8 +29,25 @@ function Description() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.1 }}
-          className="text-center pt-1 pb-1 px-4"
+          className="text-center pt-32 pb-1 px-4"
         >
+          <span
+            style={{
+              display: "inline-block",
+              fontFamily: "'Cinzel', serif",
+              fontSize: "clamp(0.8rem, 1.3vw, 1.1rem)",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              color: "#fff8e7",
+              background: "rgba(0,0,0,0.55)",
+              border: "1px solid rgba(245,200,66,0.4)",
+              padding: "0.35em 1.2em",
+              borderRadius: "2px",
+              marginBottom: "1.5rem",
+            }}
+          >
+            ✦ Spectacle en cours de création ✦
+          </span>
           <h1
             className="text-white"
             style={{
@@ -55,11 +72,11 @@ function Description() {
           viewport={{ once: true }}
           className="flex items-center gap-5 px-[22vw] py-8"
         >
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent to-yellow-600/40" />
+          <div className="flex-1 h-px bg-linear-to-r from-transparent to-yellow-600/40" />
           <span className="text-yellow-600/50 text-sm tracking-widest">
             ✦ ✦ ✦
           </span>
-          <div className="flex-1 h-px bg-gradient-to-l from-transparent to-yellow-600/40" />
+          <div className="flex-1 h-px bg-linear-to-l from-transparent to-yellow-600/40" />
         </motion.div>
 
         <div className="max-w-2xl mx-auto px-12 sm:px-20 md:px-28 pb-20 sm:pb-32 text-center">
@@ -69,7 +86,7 @@ function Description() {
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
             viewport={{ once: true }}
-            className="h-px w-20 mx-auto mb-14 bg-gradient-to-r from-transparent via-yellow-600/50 to-transparent"
+            className="h-px w-20 mx-auto mb-14 bg-linear-to-rfrom-transparent via-yellow-600/50 to-transparent"
           />
 
           {/* Paragraphes */}
@@ -85,7 +102,7 @@ function Description() {
                 <p
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: "clamp(1.05rem, 1.8vw, 1.28rem)",
+                    fontSize: "clamp(1.2rem, 2vw, 1.5rem)",
                     lineHeight: "1.95",
                     fontWeight: 300,
                   }}
@@ -104,11 +121,11 @@ function Description() {
             viewport={{ once: true }}
             className="flex items-center gap-5 mb-12"
           >
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent to-yellow-600/40" />
+            <div className="flex-1 h-px bg-linear-to-r from-transparent to-yellow-600/40" />
             <span className="text-yellow-600/50 text-sm tracking-widest">
               ✦ ✦ ✦
             </span>
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent to-yellow-600/40" />
+            <div className="flex-1 h-px bg-linear-to-l from-transparent to-yellow-600/40" />
           </motion.div>
 
           {/* Ornement bas */}
@@ -117,7 +134,7 @@ function Description() {
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 1.2, delay: 0.4 }}
             viewport={{ once: true }}
-            className="h-px w-20 mx-auto bg-gradient-to-r from-transparent via-yellow-600/40 to-transparent"
+            className="h-px w-20 mx-auto bg-linear-to-r from-transparent via-yellow-600/40 to-transparent"
           />
         </div>
       </div>
@@ -128,10 +145,7 @@ function Description() {
       </div>
 
       {/* ── Image de fond en bas, miroir de la transition haute ── */}
-      <div
-        className="absolute bottom-0 left-0 w-full overflow-hidden"
-        style={{ height: "55rem" }}
-      >
+      <div className="absolute inset-0 w-full overflow-hidden">
         <motion.div
           style={{ y: bgY, top: "-15%", bottom: "-15%" }}
           className="absolute inset-x-0"

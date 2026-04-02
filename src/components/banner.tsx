@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 import bg from "../assets/img/bg.png";
@@ -9,7 +9,6 @@ import windSrc from "../assets/sound/wind.mp3";
 
 function Banner() {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [muted, setMuted] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -56,13 +55,6 @@ function Banner() {
       window.removeEventListener("keydown", stopScroll);
     };
   }, []);
-
-  const toggleMute = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.muted = !audio.muted;
-    setMuted(!muted);
-  };
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
