@@ -29,25 +29,8 @@ function Description() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.1 }}
-          className="text-center pt-32 pb-1 px-4"
+          className="text-center pt-16 pb-1 px-4"
         >
-          <span
-            style={{
-              display: "inline-block",
-              fontFamily: "'Cinzel', serif",
-              fontSize: "clamp(0.8rem, 1.3vw, 1.1rem)",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "#fff8e7",
-              background: "rgba(0,0,0,0.55)",
-              border: "1px solid rgba(245,200,66,0.4)",
-              padding: "0.35em 1.2em",
-              borderRadius: "2px",
-              marginBottom: "1.5rem",
-            }}
-          >
-            ✦ Spectacle en cours de création ✦
-          </span>
           <h1
             className="text-white"
             style={{
@@ -60,7 +43,7 @@ function Description() {
               whiteSpace: "nowrap",
             }}
           >
-            Quand l'histoire refuse l'oubli, elle se chante.
+            « Quand l'histoire refuse l'oubli, elle se chante. »
           </h1>
         </motion.div>
 

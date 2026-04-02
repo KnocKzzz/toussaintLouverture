@@ -5,12 +5,20 @@ const VIDEO_ID = "dBEpXXIbKYI";
 const HELLOASSO_URL =
   "https://www.helloasso.com/associations/dsibels/collectes/toussaint-louverture-showcase";
 
-function Footer() {
+interface Props {
+  onContactOpen: () => void;
+}
+
+function Footer({ onContactOpen }: Props) {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <footer style={{ background: "linear-gradient(to bottom, #000 0%, #0d0a07 100%)" }} className="relative overflow-hidden">
-
+    <footer
+      style={{
+        background: "linear-gradient(to bottom, #000 0%, #0d0a07 100%)",
+      }}
+      className="relative overflow-hidden"
+    >
       <div className="relative z-10 max-w-3xl mx-auto px-8 sm:px-16 pt-24 pb-16 flex flex-col items-center gap-16">
         {/* ── Vidéo ── */}
         <motion.div
@@ -70,7 +78,7 @@ function Footer() {
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="w-full h-px bg-gradient-to-r from-transparent via-yellow-600/40 to-transparent"
+          className="w-full h-px bg-linear-to-r from-transparent via-yellow-600/40 to-transparent"
         />
 
         {/* ── Financement participatif ── */}
@@ -99,7 +107,8 @@ function Footer() {
               fontWeight: 300,
             }}
           >
-            Participez à la création de ce spectacle vivant en soutenant notre campagne de financement participatif.
+            Participez à la création de ce spectacle vivant en soutenant notre
+            campagne de financement participatif.
           </p>
           <a
             href={HELLOASSO_URL}
@@ -116,9 +125,26 @@ function Footer() {
           </a>
         </motion.div>
 
+        {/* ── Contact ── */}
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          onClick={onContactOpen}
+          style={{
+            fontFamily: "'Cinzel', serif",
+            fontSize: "clamp(0.6rem, 1.1vw, 0.78rem)",
+            letterSpacing: "0.25em",
+          }}
+          className="px-8 py-3 border border-white/20 text-white/50 hover:border-white/40 hover:text-white/80 transition-all duration-300"
+        >
+          Nous contacter
+        </motion.button>
+
         {/* ── Bas de page ── */}
         <div className="w-full flex flex-col items-center gap-3 pt-4 border-t border-white/5">
-          <div className="h-px w-12 bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent" />
+          <div className="h-px w-12 bg-linear-to-r from-transparent via-yellow-600/30 to-transparent" />
           <p
             className="text-white/20 text-xs tracking-widest"
             style={{ fontFamily: "'Cinzel', serif" }}
