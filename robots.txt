@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /*.json$
+Disallow: /.git/
+
+# Crawl-delay pour les crawlers lents
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://toussaintlouverturelespectacle.fr/sitemap.xml
