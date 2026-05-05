@@ -77,6 +77,7 @@ function Banner() {
         {/* CHAPEAU */}
         <motion.img
           src={hat}
+          alt="Logo du spectacle Toussaint Louverture - chapeau révolutionnaire"
           initial={{ opacity: 0, scale: 0.6, y: 40, filter: "blur(8px)" }}
           animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.6, delay: 1 }}
@@ -93,6 +94,7 @@ function Banner() {
         {/* BRAND */}
         <motion.img
           src={brand}
+          alt="Toussaint Louverture - titre du spectacle musical"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6, delay: 2.2 }}
@@ -105,6 +107,7 @@ function Banner() {
         {/* COWRIE */}
         <motion.img
           src={cowrie}
+          alt="Coquillage cowrie - symbole de richesse et de dignité"
           initial={{ scale: 0.3, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{

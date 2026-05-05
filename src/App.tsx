@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Banner from "./components/banner";
 import Description from "./components/description";
+import Dates from "./components/dates";
 import Footer from "./components/footer";
 import ContactModal from "./components/ContactModal";
 
@@ -26,10 +27,12 @@ function App() {
             lineHeight: 1.8,
           }}
         >
-          ✦ Spectacle en cours<br className="sm:hidden" /> de création ✦
+          ✦ Spectacle en cours
+          <br className="sm:hidden" /> de création ✦
         </span>
       </div>
       <Description />
+      <Dates />
       <Footer onContactOpen={() => setContactOpen(true)} />
     </>
   );
