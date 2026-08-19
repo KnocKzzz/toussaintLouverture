@@ -170,16 +170,20 @@ function Footer({ onContactOpen }: Props) {
                 key={alt}
                 className="flex items-center justify-center rounded-xs"
                 style={{
-                  background: "#f7f2e7",
-                  padding: "0.7rem 1.3rem",
+                  background: "#fff",
+                  padding: "0.5rem",
+                  width: "clamp(110px, 14vw, 168px)",
+                  height: "clamp(64px, 8vw, 96px)",
                 }}
               >
                 <img
                   src={src}
                   alt={alt}
                   style={{
-                    height: "clamp(30px, 4vw, 48px)",
+                    maxWidth: "100%",
+                    maxHeight: "100%",
                     width: "auto",
+                    height: "auto",
                     objectFit: "contain",
                   }}
                 />
