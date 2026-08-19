@@ -57,7 +57,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
+    <div id="accueil" className="relative h-screen w-full overflow-hidden bg-black">
       <audio ref={audioRef} src={windSrc} />
 
       {/* BACKGROUND */}
@@ -119,6 +119,33 @@ function Banner() {
           className="w-[18vw] sm:w-[12vw] md:w-[8vw] max-w-[90px] drop-shadow-[0_0_20px_rgba(255,200,0,0.6)]"
         />
       </div>
+
+      {/* BADGE */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 5.4 }}
+        className="absolute bottom-6 sm:bottom-10 inset-x-0 z-10 flex justify-center px-6"
+      >
+        <span
+          style={{
+            fontFamily: "'Cinzel', serif",
+            fontSize: "clamp(0.62rem, 1.3vw, 1rem)",
+            letterSpacing: "clamp(0.05em, 1vw, 0.2em)",
+            textTransform: "uppercase",
+            color: "#fff8e7",
+            border: "1px solid rgba(245,200,66,0.4)",
+            padding: "0.6em 1em",
+            display: "inline-block",
+            lineHeight: 1.8,
+            textAlign: "center",
+            whiteSpace: "nowrap",
+            backdropFilter: "blur(2px)",
+          }}
+        >
+          ✦ Spectacle en cours de création ✦
+        </span>
+      </motion.div>
     </div>
   );
 }

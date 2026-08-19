@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import dsibel from "../assets/img/d-sibels.jpeg";
 import happyShow from "../assets/img/happy_shows.jpeg";
+import fdva from "../assets/img/fdva.jpg";
 
 const VIDEO_ID = "dBEpXXIbKYI";
 const HELLOASSO_URL =
@@ -85,11 +86,12 @@ function Footer({ onContactOpen }: Props) {
 
         {/* ── Financement participatif ── */}
         <motion.div
+          id="soutenir"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="flex flex-col items-center gap-6 text-center"
+          className="flex flex-col items-center gap-6 text-center scroll-mt-24"
         >
           <p
             className="text-yellow-600/60 uppercase tracking-[0.35em]"
@@ -158,36 +160,31 @@ function Footer({ onContactOpen }: Props) {
           >
             Partenaires
           </p>
-          <div className="flex items-center justify-center gap-10">
-            <img
-              src={dsibel}
-              alt="Association D-Sibel"
-              style={{
-                height: "48px",
-                width: "auto",
-                objectFit: "contain",
-                filter: "none",
-                opacity: 0.85,
-              }}
-            />
-            <div
-              style={{
-                width: "1px",
-                height: "32px",
-                background: "rgba(245,200,66,0.2)",
-              }}
-            />
-            <img
-              src={happyShow}
-              alt="Happy Show"
-              style={{
-                height: "48px",
-                width: "auto",
-                objectFit: "contain",
-                filter: "none",
-                opacity: 0.85,
-              }}
-            />
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            {[
+              { src: dsibel, alt: "Association D-Sibel" },
+              { src: happyShow, alt: "Happy Show" },
+              { src: fdva, alt: "FDVA" },
+            ].map(({ src, alt }) => (
+              <div
+                key={alt}
+                className="flex items-center justify-center rounded-xs"
+                style={{
+                  background: "#f7f2e7",
+                  padding: "0.7rem 1.3rem",
+                }}
+              >
+                <img
+                  src={src}
+                  alt={alt}
+                  style={{
+                    height: "clamp(30px, 4vw, 48px)",
+                    width: "auto",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+            ))}
           </div>
         </motion.div>
 

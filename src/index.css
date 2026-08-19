@@ -8,3 +8,14 @@ body,
   background-color: black;
   color: white
 }
+
+html {
+  scroll-behavior: smooth;
+  --header-h: 4rem; /* h-16 */
+}
+
+@media (min-width: 640px) {
+  html {
+    --header-h: 5rem; /* sm:h-20 */
+  }
+}

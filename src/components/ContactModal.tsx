@@ -60,7 +60,7 @@ function ContactModal({ onClose }: Props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center px-4"
+        className="fixed inset-0 z-60 flex items-center justify-center px-4"
         style={{ background: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)" }}
         onClick={onClose}
       >
@@ -92,6 +92,7 @@ function ContactModal({ onClose }: Props) {
             </h2>
             <button
               onClick={onClose}
+              className="cursor-pointer"
               style={{
                 color: "rgba(255,255,255,0.3)",
                 fontSize: "1.2rem",
