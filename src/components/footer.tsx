@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import dsibel from "../assets/img/d-sibels.jpeg";
 import happyShow from "../assets/img/happy_shows.jpeg";
 import fdva from "../assets/img/fdva.jpg";
+import fme from "../assets/img/fme.png";
 
 const VIDEO_ID = "dBEpXXIbKYI";
 const HELLOASSO_URL =
@@ -93,7 +94,7 @@ function Footer({ onContactOpen }: Props) {
           viewport={{ once: true, amount: 0.1 }}
           className="flex flex-col items-center gap-6 text-center scroll-mt-24"
         >
-          <p
+          <h2
             className="text-yellow-600/60 uppercase tracking-[0.35em]"
             style={{
               fontFamily: "'Cinzel', serif",
@@ -101,7 +102,7 @@ function Footer({ onContactOpen }: Props) {
             }}
           >
             Soutenir le projet
-          </p>
+          </h2>
           <p
             className="text-white/70 max-w-md"
             style={{
@@ -154,17 +155,18 @@ function Footer({ onContactOpen }: Props) {
           viewport={{ once: true }}
           className="flex flex-col items-center gap-6 w-full"
         >
-          <p
+          <h2
             className="text-white/20 uppercase tracking-[0.3em]"
             style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem" }}
           >
             Partenaires
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 w-full max-w-xl">
             {[
               { src: dsibel, alt: "Association D-Sibel" },
               { src: happyShow, alt: "Happy Show" },
               { src: fdva, alt: "FDVA" },
+              { src: fme, alt: "Fondation pour la Mémoire de l'Esclavage" },
             ].map(({ src, alt }) => (
               <div
                 key={alt}
@@ -172,8 +174,8 @@ function Footer({ onContactOpen }: Props) {
                 style={{
                   background: "#fff",
                   padding: "0.5rem",
-                  width: "clamp(110px, 14vw, 168px)",
-                  height: "clamp(64px, 8vw, 96px)",
+                  width: "100%",
+                  height: "clamp(72px, 16vw, 96px)",
                 }}
               >
                 <img

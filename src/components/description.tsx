@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import bg from "../assets/img/bg.png";
+import bg from "../assets/img/bg.webp";
 
 const SECTION_ONE =
   "Le destin retrouvé d'un prince esclave est une comédie musicale moderne. Un hommage vivant. Une histoire qui résonne. À la croisée de l'art et de l'Histoire, ce spectacle puissant donne vie à un destin hors du commun à travers une création contemporaine mêlant musique, émotion et narration. Une expérience immersive qui touche, éclaire et inspire, un moment de scène où la mémoire devient énergie, et où le passé dialogue avec notre présent.";
@@ -32,7 +32,7 @@ function Description() {
           viewport={{ once: true, amount: 0.1 }}
           className="text-center pb-1 px-4"
         >
-          <h1
+          <h2
             className="text-white"
             style={{
               fontFamily: "'Cinzel', serif",
@@ -45,7 +45,7 @@ function Description() {
             }}
           >
             « Quand l'histoire refuse l'oubli,<br className="sm:hidden" /> elle se chante. »
-          </h1>
+          </h2>
         </motion.div>
 
         {/* Séparateur entre H1 et paragraphes */}

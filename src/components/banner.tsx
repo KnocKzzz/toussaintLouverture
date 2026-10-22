@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-import bg from "../assets/img/bg.png";
-import hat from "../assets/img/logo-chapeau.png";
-import cowrie from "../assets/img/cowrie.png";
-import brand from "../assets/img/brand.png";
+import bg from "../assets/img/bg.webp";
+import hat from "../assets/img/logo-chapeau.webp";
+import cowrie from "../assets/img/cowrie.webp";
+import brand from "../assets/img/brand.webp";
 import windSrc from "../assets/sound/wind.mp3";
 
 function Banner() {
@@ -73,6 +73,9 @@ function Banner() {
       <div className="absolute inset-0 bg-black/35" />
 
       {/* CONTENT */}
+      <h1 className="sr-only">
+        Toussaint Louverture, la comédie musicale
+      </h1>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
         {/* CHAPEAU */}
         <motion.img
